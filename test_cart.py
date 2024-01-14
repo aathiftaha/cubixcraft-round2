@@ -22,7 +22,10 @@ class TestShoppingCartSystem(unittest.TestCase):
         cart = ShoppingCart()
         soap = Product("Dove Soap", 39.99)
         cart.add_product(soap, 5)
-        self.assertAlmostEqual(cart.total_price(), 199.95, places=2)
+        cart.add_product(soap, 3)
+        self.assertEqual(len(cart.products), 8)
+        self.assertAlmostEqual(cart.total_price(), 319.92, places=2)
+        
 
 if __name__ == '__main__':
     unittest.main()

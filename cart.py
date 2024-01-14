@@ -20,5 +20,9 @@ if __name__ == "__main__":
 
     # Adding 5 soaps to the cart
     cart.add_product(soap, 5)
+    
+    cart.add_product(soap, 3)
+   
+    print(f"Total items in cart: {len(cart.products)} Dove Soaps")
 
     print(f"Total Price: {cart.total_price():.2f}")
